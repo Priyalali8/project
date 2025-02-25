@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button { margin: 10px; padding: 10px; width: 80%; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Word Counter</h2>
+    <form method="POST">
+        <textarea name="text" rows="5" cols="40" placeholder="Enter your text here..."></textarea><br>
+        <button type="submit">Count Words</button>
+    </form>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+    {% if word_count is not none %}
+        <p><strong>Word Count:</strong> {{ word_count }}</p>
+    {% endif %}
+</body>
+</html>
 
