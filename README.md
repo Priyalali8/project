@@ -1,4 +1,5 @@
-sample counter 
+word counter
+
 How to Run the Project
 Install Flask if not installed:
  sh
